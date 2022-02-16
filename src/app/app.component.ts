@@ -15,9 +15,18 @@ export class AppComponent {
   constructor(private restService:RestService,private router:Router ){
 
   }
-  getTraining(){
+  getAll(){
     // GET Request to get all customers
     this.restService.getAllCustomers().subscribe((data:any)=>{
+      this.customers=data.data
+      this.status=data.status;
+    },error=>{
+      this.status=0
+      console.log("status is after error ",this.status)     })
+  }
+  getCustomerByID(){
+    // GET Request to get all customers
+    this.restService.getAllCustomergetListOfCustomers(id).subscribe((data:any)=>{
       this.customers=data.data
       this.status=data.status;
     },error=>{
