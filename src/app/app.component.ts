@@ -26,7 +26,7 @@ export class AppComponent {
   }
   getCustomerByID(){
     // GET Request to get all customers
-    this.restService.getAllCustomergetListOfCustomers(id).subscribe((data:any)=>{
+    this.restService.getListOfCustomers(id).subscribe((data:any)=>{
       this.customers=data.data
       this.status=data.status;
     },error=>{
