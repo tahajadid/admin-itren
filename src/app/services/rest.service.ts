@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-const baseUrlListOfCustomers='https://itsren-academy.com/api/listOfCustomers';
+const baseUrlListOfCustomers='https://admin.itsren-academy.com/api/listOfCustomers';
 const headers = { 'content-type': 'application/json'} 
 @Injectable()
 export class RestService {
