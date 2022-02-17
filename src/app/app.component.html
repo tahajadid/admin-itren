@@ -2,13 +2,13 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <!-- button fix -->
-  <button type="button" class="btn btn-dark" style="margin-left: 20px;">All inscription</button>
-  <button type="button" class="btn btn-warning" style="margin-left: 10px;">Free</button>
-  <button type="button" class="btn btn-secondary" style="margin-left: 10px;">Home</button>
+  <button type="button" class="btn btn-dark" style="margin-left: 20px;" onclick="GetAll()">All inscription</button>
+  <button type="button" class="btn btn-warning" style="margin-left: 10px;" onclick="getCustomerByID('free')">Free</button>
+  <button type="button" class="btn btn-secondary" style="margin-left: 10px;"onclick="getCustomerByID('home')">Home</button>
   <!-- button from database -->
-  <button type="button" class="btn btn-light" style="margin-left: 40px;">SAP MM</button>
-  <button type="button" class="btn btn-light" style="margin-left: 10px;">SAP ABAP</button>
-  <button type="button" class="btn btn-light" style="margin-left: 10px;">SAP FI</button>
+  <button type="button" class="btn btn-light" style="margin-left: 40px;"onclick="getCustomerByID('id here')">SAP MM</button>
+  <button type="button" class="btn btn-light" style="margin-left: 10px;"onclick="getCustomerByID('id here')">SAP ABAP</button>
+  <button type="button" class="btn btn-light" style="margin-left: 10px;"onclick="getCustomerByID('id here')">SAP FI</button>
 </div>
 
 <div style="margin-top: 60px;">

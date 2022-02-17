@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'admin-itsren';
  
   customers=[];
-  status;
+  status:any;
   constructor(private restService:RestService,private router:Router ){
 
   }
@@ -24,7 +24,7 @@ export class AppComponent {
       this.status=0
       console.log("status is after error ",this.status)     })
   }
-  getCustomerByID(){
+  getCustomerByID(id:String|number){
     // GET Request to get all customers
     this.restService.getListOfCustomers(id).subscribe((data:any)=>{
       this.customers=data.data
