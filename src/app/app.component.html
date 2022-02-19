@@ -2,13 +2,14 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <!-- button fix -->
-  <button type="button" class="btn btn-dark" style="margin-left: 20px;" onclick="GetAll()">All inscription</button>
-  <button type="button" class="btn btn-warning" style="margin-left: 10px;" onclick="getCustomerByID('free')">Free</button>
-  <button type="button" class="btn btn-secondary" style="margin-left: 10px;"onclick="getCustomerByID('home')">Home</button>
+  <button type="button" class="btn btn-dark" style="margin-left: 20px;" (click)="getAll()">All inscription</button>
+  <button type="button" class="btn btn-warning" style="margin-left: 10px;" (click)="getCustomerByID('free')">Free</button>
+  <button type="button" class="btn btn-secondary" style="margin-left: 10px;" (click)="getCustomerByID('home')">Home</button>
   <!-- button from database -->
-  <button type="button" class="btn btn-light" style="margin-left: 40px;"onclick="getCustomerByID('id here')">SAP MM</button>
-  <button type="button" class="btn btn-light" style="margin-left: 10px;"onclick="getCustomerByID('id here')">SAP ABAP</button>
-  <button type="button" class="btn btn-light" style="margin-left: 10px;"onclick="getCustomerByID('id here')">SAP FI</button>
+  <button type="button" class="btn btn-light" style="margin-left: 40px;" (click)="getCustomerByID('2')">SAP MM</button>
+  <button type="button" class="btn btn-light" style="margin-left: 10px;" (click)="getCustomerByID('5')">SAP ABAP</button>
+  <button type="button" class="btn btn-light" style="margin-left: 10px;" (click)="getCustomerByID('4')">SAP SD</button>
+  <button type="button" class="btn btn-light" style="margin-left: 10px;" (click)="getCustomerByID('3')">SAP FI</button>
 </div>
 
 <div style="margin-top: 60px;">
@@ -23,18 +24,12 @@
       </tr>
     </thead>
     <!-- list of inscription from database -->
-    <tbody>
+    <tbody *ngFor="let customer of customers">
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <th scope="row">{{customer.id_person}}</th>
+        <td>{{customer.full_name}}</td>
+        <td>{{customer.phone}}</td>
+        <td>{{customer.email}}</td>
       </tr>
     </tbody>
   </table> 
